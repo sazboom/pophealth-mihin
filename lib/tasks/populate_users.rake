@@ -21,7 +21,7 @@ namespace :users do
                          :password =>       row[3].to_s,
                          :email =>          row[4].to_s,
                          :agree_license =>  true,
-                         :admin =>          true,
+                         :admin =>          row[5].to_s == 'true',
                          :approved =>       true)
         admin_account.save!
       end

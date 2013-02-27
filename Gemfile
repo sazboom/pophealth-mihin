@@ -36,6 +36,8 @@ gem 'formtastic'
 gem 'cancan'
 gem 'factory_girl', "2.6.3"
 
+gem 'unicorn'
+
 # Windows doesn't have syslog, so need a gem to log to EventLog instead
 gem 'win32-eventlog', :platforms => [:mswin, :mingw]
 
