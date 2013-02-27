@@ -3,7 +3,7 @@ class RecordsController < ActionController::Metal
   
   def create
 
-    current_user = request.env['warden'].authenticate!
+    current_user = request.env['warden'].authenticate!(:basic)
     
     if (current_user.admin?)
       result = RecordImporter.import(request.body)
@@ -25,5 +25,7 @@ class RecordsController < ActionController::Metal
     end
     
   end
+
+
   
 end
